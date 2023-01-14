@@ -40,6 +40,10 @@ $light-grayish-blue: hsl(210, 46%, 95%);
 // font-size: 13px
 // font-family: https://fonts.google.com/specimen/Manrope 500, 700
 
+.article {
+  font-family: 'Manrope', sans-serif;
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 </style>
