@@ -1,3 +1,22 @@
+
+<script>
+import Share from '@/components/Share.vue';
+export default {
+  name: 'App',
+  components: { Share },
+  data() {
+    return {
+      showLink: false
+    }
+  },
+
+  methods: {
+    onSendBtnClick() {
+      this.showLink = !this.showLink;
+    }
+  }
+}
+</script>
 <template>
   <div class="article">
     <div class="article__container">
@@ -15,7 +34,10 @@
               <p class="article__publication-date">28 Jun 2020</p>
             </div>
           </div>
-          <div class="article__send-btn">
+          <div class="article__share-link" v-if="showLink">
+            <Share class="article__share" />
+          </div>
+          <div class="article__send-btn" @click="onSendBtnClick">
             <img class="article__send-icon" src="./assets/icon-share.svg" alt="Send icon" />
           </div>
         </div>
@@ -25,16 +47,10 @@
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/MitiaElodie">MitiaElodie</a>.
     </div>
   </footer>
 </template>
-
-<script>
-export default {
-  name: 'App',
-}
-</script>
 
 <style lang="scss">
 $very-dark-grayish-blue: hsl(217, 19%, 35%);
