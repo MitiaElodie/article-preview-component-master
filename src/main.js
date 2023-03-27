@@ -4,8 +4,6 @@ import VueTippy from 'vue-tippy'
 
 const app = createApp(App)
 
-app.use(VueTippy, {
-  defaultProps: { placement: 'right' },
-})
+app.use(VueTippy)
 
 app.mount('#app')
