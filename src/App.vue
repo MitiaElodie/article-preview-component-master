@@ -1,12 +1,21 @@
 
 <script>
 import Share from '@/components/Share.vue';
+import 'tippy.js/dist/tippy.css';
 export default {
   name: 'App',
   components: { Share },
   data() {
     return {
-      showLink: false
+      showLink: false,
+    }
+  },
+
+  computed: {
+    cssVariables() {
+      return {
+        '--mobile-threshold': '375px',
+      }
     }
   },
 
@@ -18,7 +27,7 @@ export default {
 }
 </script>
 <template>
-  <div class="article">
+  <div class="article" :style="cssVariables">
     <div class="article__container">
       <div class="article__img-container">
         <img class="article__img" src="./assets/drawers.jpg" alt="A drawer well decorated" />
@@ -33,13 +42,20 @@ export default {
               <p class="article__author-name">Michelle Appleton</p>
               <p class="article__publication-date">28 Jun 2020</p>
             </div>
-          </div>
-          <div class="article__share-link" v-if="showLink">
-            <Share class="article__share" />
-          </div>
-          <div class="article__send-btn" @click="onSendBtnClick">
-            <img class="article__send-icon" src="./assets/icon-share.svg" alt="Send icon" />
-          </div>
+          </div>          
+          <tippy
+            :interactive="true"
+            :offset="[0, 20]"
+          >
+            <template #default>
+              <div name="sendBtn" class="article__send-btn" @click="onSendBtnClick">
+                <img class="article__send-icon" src="./assets/icon-share.svg" alt="Send icon" />
+              </div>
+            </template>
+            <template #content>
+              <Share />
+            </template>
+          </tippy>
         </div>
       </div>
     </div>
@@ -131,6 +147,16 @@ $container-background: hsla(212, 23%, 69%, 0.2);
     width: 35px;
     height: 35px;
   }
+}
+
+.tippy-box {
+  background-color: $very-dark-grayish-blue;
+  border-radius: 7px;
+  padding: 10px 20px;
+}
+
+.tippy-arrow {
+  color: $very-dark-grayish-blue;
 }
 
 .attribution { font-size: 11px; text-align: center; }
