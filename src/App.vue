@@ -146,6 +146,18 @@ $container-background: hsla(212, 23%, 69%, 0.2);
     cursor: pointer;
     width: 35px;
     height: 35px;
+
+    &:hover {
+      background-color: $desaturated-dark-blue;
+
+      & .article__send-icon {
+        filter: none;
+      }
+    }
+  }
+
+  &__send-icon {
+    filter: invert(49%) sepia(24%) saturate(371%) hue-rotate(174deg) brightness(96%) contrast(94%);
   }
 }
 
