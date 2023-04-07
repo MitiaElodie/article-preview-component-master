@@ -25,5 +25,9 @@ $margin-value: 10px;
     letter-spacing: 2px;
     color: hsl(212, 23%, 69%);
   }
+
+  &__icon-link {
+    line-height: 0; // to remove the space in the bottom
+  }
 }
 </style>
