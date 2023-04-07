@@ -101,7 +101,7 @@ $container-background: hsla(212, 23%, 69%, 0.2);
   }
 
   &__details-container {
-    padding: 35px;
+    padding: 30px;
   }
 
   &__title {
@@ -179,7 +179,7 @@ $container-background: hsla(212, 23%, 69%, 0.2);
     &__container {
       flex-direction: row;
       max-height: 300px;
-      max-width: 900px;
+      max-width: 800px;
     }
   }
 }
