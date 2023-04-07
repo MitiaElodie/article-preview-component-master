@@ -43,7 +43,7 @@ Users should be able to:
 - [Vue.js](https://vuejs.org/) - JS framework
 
 ### Continued development
-Adapt the component to match the design given when the screen is smaller.
+Adapt the component to match the given design when the screen is smaller.
 
 ## Author
 
