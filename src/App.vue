@@ -5,29 +5,10 @@ import 'tippy.js/dist/tippy.css';
 export default {
   name: 'App',
   components: { Share },
-  data() {
-    return {
-      showLink: false,
-    }
-  },
-
-  computed: {
-    cssVariables() {
-      return {
-        '--mobile-threshold': '375px',
-      }
-    }
-  },
-
-  methods: {
-    onSendBtnClick() {
-      this.showLink = !this.showLink;
-    }
-  }
 }
 </script>
 <template>
-  <div class="article" :style="cssVariables">
+  <div class="article">
     <div class="article__container">
       <div class="article__img-container">
         <img class="article__img" src="./assets/drawers.jpg" alt="A drawer well decorated" />
