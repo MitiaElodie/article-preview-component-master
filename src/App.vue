@@ -91,10 +91,13 @@ $container-background: hsla(212, 23%, 69%, 0.2);
     border-radius: 10px;
     background-color: white;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   &__img{
     width: 100%;
+    height: 100%;
   }
 
   &__details-container {
@@ -171,6 +174,15 @@ $container-background: hsla(212, 23%, 69%, 0.2);
   color: $very-dark-grayish-blue;
 }
 
+@media screen and (min-width: 650px) {
+  .article {
+    &__container {
+      flex-direction: row;
+      max-height: 300px;
+      max-width: 900px;
+    }
+  }
+}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 </style>
