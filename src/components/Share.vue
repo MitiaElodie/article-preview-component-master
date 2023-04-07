@@ -1,9 +1,9 @@
 <template>
   <div class="share">
     <span class="share__text">SHARE</span>
-    <img class="share__icon" src="@/assets/icon-facebook.svg" alt="Facebook icon" />
-    <img class="share__icon" src="@/assets/icon-twitter.svg" alt="Twitter icon" />
-    <img class="share__icon" src="@/assets/icon-pinterest.svg" alt="Pinterest icon" />
+    <a class="share__icon-link" href="https://www.facebook.com/"><img class="share__icon" src="@/assets/icon-facebook.svg" alt="Facebook icon" /></a>
+    <a class="share__icon-link" href="https://twitter.com/"><img class="share__icon" src="@/assets/icon-twitter.svg" alt="Twitter icon" /></a>
+    <a class="share__icon-link" href="https://www.pinterest.com/"><img class="share__icon" src="@/assets/icon-pinterest.svg" alt="Pinterest icon" /></a>
   </div>
 </template>
 
